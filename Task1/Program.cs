@@ -12,7 +12,7 @@
         /// Является ли строка палиндромом.
         /// </summary>
         /// <param name="str">Строка для проверки.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает true/false.</returns>
         static bool IsPalindrom(string str)
         {
             bool test = true;
@@ -23,6 +23,11 @@
             }
             return test;
         }
+        /// <summary>
+        /// Является ли строка палиндромом.
+        /// </summary>
+        /// <param name="x">Целое число для проверки.</param>
+        /// <returns>Возвращает true/false.</returns>
         static bool IsPalindrom(int x)
         {
             string str = x.ToString();
