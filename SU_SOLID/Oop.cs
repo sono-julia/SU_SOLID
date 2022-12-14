@@ -3,7 +3,7 @@ public class Oop
 {
     public static void Main()
     {
-        Car car = new Car(new Engine("MK 23", 223, 2.5));
+        Car car = new Car(new Engine("MK 23", 223, 2.5), new Passanger());
         Console.WriteLine(car.GetPower());
         car.Engine = new Engine("test", 110, 1.6);
         Console.WriteLine(car.GetPower());
@@ -29,17 +29,24 @@ public class Engine
     public double Volume { get => volume; set => volume = value; }
 
 }
+ public class Passanger
+{
+
+}
 
 public class Car
 {
     private Engine engine;
+    private Passanger passanger;
 
-    public Car(Engine engine)
+    public Car(Engine engine, Passanger passanger)
     {
         this.engine = engine;
+        this.passanger = passanger;
     }
 
     public Engine Engine { set => engine = value; }
+    public Passanger Passanger { get => passanger; set => passanger = value; }
 
     public string GetPower()
     {
