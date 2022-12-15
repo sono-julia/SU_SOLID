@@ -3,30 +3,13 @@ using SU_Dictionary.Presentation.Api;
 
 namespace SU_Dictionary
 {
-    partial class MainView : IMainView
+    partial class MainView
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private MainPresenter presenter = new MainPresenter(this);
-        //почему ключевое слово this неприменимо в текущем контексте?
-
-        public void Start()
-        {
-            this.InitializeComponent();
-            presenter.OnStart();
-        }
-
-        public void Show(string message)
-        {
-            //как отобразить?
-        }
-
-        public void ShowError(Exception e)
-        {
-            //куда вывести ошибку?
-        }
+        
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -48,10 +31,18 @@ namespace SU_Dictionary
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "MainView";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainView_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
