@@ -2,7 +2,7 @@
 {
     class Solution
     {
-        //общее начало
+        //https://leetcode.com/problems/longest-common-prefix/
         static void Main()
         {
             string[] strings = Console.ReadLine().Split();
