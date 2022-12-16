@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SU_Dictionary.Domain.Api;
 using SU_Dictionary.Domain.Model;
 
-namespace SU_Dictionary.Domain
+namespace SU_Dictionary.Domain.Apiimpl
 {
     public class GoogleTranslateToEngUserCase : ITranslateToEngUserCase
     {

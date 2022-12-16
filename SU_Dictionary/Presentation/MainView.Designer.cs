@@ -31,13 +31,24 @@ namespace SU_Dictionary
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 426);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(284, 461);
+            this.Controls.Add(this.button1);
             this.Name = "MainView";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainView_Load);
@@ -46,5 +57,7 @@ namespace SU_Dictionary
         }
 
         #endregion
+
+        private Button button1;
     }
 }
