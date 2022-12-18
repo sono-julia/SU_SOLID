@@ -33,6 +33,10 @@
                 {
                     stack.Pop();
                 }
+                else
+                {
+                    return false;
+                }
             }
             return !stack.Any();
         }
