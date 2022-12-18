@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SU_Dictionary.Domain.Api;
 
-namespace SU_Dictionary.Domain
+namespace SU_Dictionary.Domain.Apiimpl
 {
     public class TranslateUserCase : ITranslateUserCase
     {

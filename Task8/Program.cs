@@ -21,17 +21,17 @@
 
             foreach (char c in s)
             {
-                if (!stack.Any())
+                if (pairs.ContainsKey(c))
                 { 
                     stack.Push(c);
+                } 
+                else if (!stack.Any())
+                {
+                    return false;
                 }
-                else if (c== pairs[stack.Peek()])
+                else if (c == pairs[stack.Peek()])
                 {
                     stack.Pop();
-                }
-                else
-                {
-                    stack.Push(c);
                 }
             }
             return !stack.Any();
