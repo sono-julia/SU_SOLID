@@ -9,7 +9,7 @@ namespace SU_Dictionary.Domain.Apiimpl
 {
     public class TranslateUserCase : ITranslateUserCase
     {
-        public List<string> GetMyTranslatins()
+        public List<string> GetMyTranslations()
         {
             List<string> data = new List<string>(); //временно, нужен запрос к БД
             return data;

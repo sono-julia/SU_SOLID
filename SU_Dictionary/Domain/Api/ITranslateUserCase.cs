@@ -8,6 +8,6 @@ namespace SU_Dictionary.Domain.Api
 {
     public interface ITranslateUserCase
     {
-        List<string> GetMyTranslatins();
+        List<string> GetMyTranslations();
     }
 }

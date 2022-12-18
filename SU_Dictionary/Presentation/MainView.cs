@@ -14,12 +14,14 @@ namespace SU_Dictionary
 {
     public partial class MainView : Form, IMainView
     {
-        private MainPresenter presenter = new MainPresenter(this);
+        private MainPresenter presenter;
         //почему ключевое слово this неприменимо в текущем контексте?
 
         public MainView()
         {
-            InitializeComponent();
+            presenter = new MainPresenter(this);
+            //InitializeComponent();
+
         }
 
         private void MainView_Load(object sender, EventArgs e)
@@ -41,6 +43,25 @@ namespace SU_Dictionary
         public void ShowError(Exception e)
         {
             //куда вывести ошибку?
+        }
+
+        //Нажатие на слово (?)
+        private void EditWord(object sender, EventArgs e)
+        {
+            EditView editView= new EditView();
+            editView.Start(); //Открываем окно с изменением слова
+        }
+
+        public void LoadGridData()
+        {
+            throw new NotImplementedException();
+        }
+        //Нажатие на кнопку [+]
+        public void AddWordButtonClick(object sender, EventArgs e) 
+        {
+            AddView addView = new AddView();
+            addView.Start(); //Открываем окно с добавлением слова
+            
         }
     }
 }
