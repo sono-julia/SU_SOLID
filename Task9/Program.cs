@@ -7,11 +7,11 @@ namespace Solid
         //https://leetcode.com/problems/sqrtx/
         static void Main()
         {
-            int n10 = int.Parse(Console.ReadLine());
-            //BitArray ba = new BitArray(new int[1] { n10,});
-            //Console.WriteLine(Convert.ToString(n10, 2));
+            int n = int.Parse(Console.ReadLine());
+            //BitArray ba = new BitArray(new int[1] { n,});
+            //Console.WriteLine(Convert.ToString(n, 2));
             
-            //Console.WriteLine(MySqrt(s));
+            Console.WriteLine(MySqrt(n));
 
         }
         public static int MySqrt(int x)
@@ -22,16 +22,18 @@ namespace Solid
 
             for (int i = 0; i < n2.Length/2; i++)
             {
-                
+                int square = (int)Math.Pow(Convert.ToInt32(result + "1", 2), 2);
+                string substring = n2.Substring(0, (i + 1) * 2);
+                if (square <= Convert.ToInt32(substring, 2))
+                {
+                    result += "1";
+                }
+                else
+                {
+                    result += "0";
+                }
             }
-
-            
-
-
-
-
-            
-            return Convert.ToInt32(result, 10);
+            return Convert.ToInt32(result, 2);
         }
     }
 }
